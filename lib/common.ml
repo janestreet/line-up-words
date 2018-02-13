@@ -1,4 +1,5 @@
 open Core
+open Re2.Std
 
 module P  = Patience_diff_lib.Std.Patience_diff.String
 module MB = Patience_diff_lib.Std.Patience_diff.Matching_block
