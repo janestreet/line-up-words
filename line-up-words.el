@@ -1,5 +1,6 @@
 (defvar line-up-words-command "line-up-words")
 
+;;;###autoload
 (defun line-up-words ()
   "Tries to align words in the region in an intelligent way."
   (interactive)
