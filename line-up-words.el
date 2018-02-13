@@ -1,3 +1,9 @@
+;;; line-up-words.el --- Align words in an intelligent way
+
+;; Copyright 2018 Jane Street Group, LLC <opensource@janestreet.com>
+;; URL: https://github.com/janestreet/line-up-words
+;; Version: 1.0
+
 (defvar line-up-words-command "line-up-words")
 
 ;;;###autoload
@@ -10,3 +16,5 @@
   (indent-region (region-beginning) (region-end)))
 
 (provide 'line-up-words)
+
+;;; line-up-words.el ends here
