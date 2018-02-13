@@ -4,6 +4,13 @@
 ;; URL: https://github.com/janestreet/line-up-words
 ;; Version: 1.0
 
+;;; Commentary:
+
+;; See the README.md for more info;
+;; https://github.com/janestreet/line-up-words
+
+;;; Code:
+
 (defvar line-up-words-command "line-up-words")
 
 ;;;###autoload
