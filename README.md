@@ -37,5 +37,5 @@ instance, to bind it to `C-c a`, add this to your `~/.emacs`:
 
 ```scheme
 (require 'line-up-words)
-(global-set-key "\C-c a" 'delete-trailing-whitespace)
+(global-set-key "\C-c a" 'line-up-words)
 ```
