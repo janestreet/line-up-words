@@ -39,3 +39,17 @@ instance, to bind it to `C-c a`, add this to your `~/.emacs`:
 (require 'line-up-words)
 (global-set-key "\C-c a" 'line-up-words)
 ```
+
+### Installation
+
+The easiest way to install the `line-up-words` command line tool is
+via the [opam package
+manager](https://opam.ocaml.org/doc/Install.html). Once you have
+installed opam, you can run the following command to install
+`line-up-words`:
+
+```sh
+$ opam install line-up-words
+```
+
+
