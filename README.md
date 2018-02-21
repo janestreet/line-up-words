@@ -51,5 +51,3 @@ installed opam, you can run the following command to install
 ```sh
 $ opam install line-up-words
 ```
-
-
