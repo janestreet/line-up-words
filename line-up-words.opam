@@ -12,12 +12,12 @@ depends: [
   "core"
   "core_extended"
   "patience_diff"
-  "ppx_driver"
   "ppx_jane"
   "re2"
-  "jbuilder"                {build & >= "1.0+beta12"}
+  "jbuilder"                {build & >= "1.0+beta18.1"}
   "ocaml-migrate-parsetree" {>= "1.0"}
   "pcre"
+  "ppxlib"                  {>= "0.1.1"}
 ]
 available: [ ocaml-version >= "4.04.1" ]
 descr: "
