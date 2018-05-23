@@ -4,7 +4,7 @@ authors: ["Jane Street Group, LLC <opensource@janestreet.com>"]
 homepage: "https://github.com/janestreet/line-up-words"
 bug-reports: "https://github.com/janestreet/line-up-words/issues"
 dev-repo: "git+https://github.com/janestreet/line-up-words.git"
-license: "Apache-2.0"
+license: "MIT"
 build: [
   ["jbuilder" "build" "-p" name "-j" jobs]
 ]
