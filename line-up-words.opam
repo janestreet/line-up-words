@@ -10,7 +10,6 @@ build: [
 ]
 depends: [
   "core"
-  "core_extended"
   "patience_diff"
   "ppx_jane"
   "re2"
