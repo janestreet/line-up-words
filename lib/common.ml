@@ -9,7 +9,7 @@ let combine_triples (triples : MB.t list list) =
   let intervals =
     List.map triples ~f:(fun triples ->
       List.map triples ~f:(fun mb ->
-        Interval.create mb.MB.mine_start (mb.MB.mine_start + mb.MB.length - 1)))
+        Interval.create mb.MB.prev_start (mb.MB.prev_start + mb.MB.length - 1)))
   in
   match intervals with
   | [] -> []
@@ -18,8 +18,8 @@ let combine_triples (triples : MB.t list list) =
 
 let find_idx (triples : MB.t list) idx =
   List.find_map triples ~f:(fun mb ->
-    if mb.MB.mine_start <= idx && mb.MB.mine_start + mb.MB.length > idx
-    then Some (mb.MB.other_start + (idx - mb.MB.mine_start))
+    if mb.MB.prev_start <= idx && mb.MB.prev_start + mb.MB.length > idx
+    then Some (mb.MB.next_start + (idx - mb.MB.prev_start))
     else None
   )
 
@@ -187,14 +187,14 @@ let line_up_words lines =
         P.get_matching_blocks
           ~big_enough:1
           ~transform:Fn.id
-          ~mine:(Array.of_list mine)
-          ~other:(Array.of_list other)
+          ~prev:(Array.of_list mine)
+          ~next:(Array.of_list other)
       )
     in
     let res = combine triples in
     let normalized_ids =
       List.map res ~f:(fun (id1, ids, len) ->
-        let ids = id1 :: List.map ids ~f:uw in
+        let ids = id1 :: List.map ids ~f:(fun id -> Option.value_exn id) in
         ids, len)
     in
     let nonmatch_ids =
