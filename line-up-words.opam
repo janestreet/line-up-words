@@ -15,7 +15,7 @@ depends: [
   "patience_diff"
   "ppx_jane"
   "re2"
-  "dune"          {>= "1.5.1"}
+  "dune"          {>= "2.0.0"}
   "pcre"
 ]
 synopsis: "Align words in an intelligent way"
