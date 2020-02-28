@@ -1,8 +1,8 @@
 open Core
 open Poly
 
-module P  = Patience_diff_lib.Std.Patience_diff.String
-module MB = Patience_diff_lib.Std.Patience_diff.Matching_block
+module P  = Patience_diff_lib.Patience_diff.String
+module MB = Patience_diff_lib.Patience_diff.Matching_block
 
 module Interval = Core.Interval.Int
 
