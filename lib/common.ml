@@ -190,6 +190,7 @@ let line_up_words lines =
           ~transform:Fn.id
           ~prev:(Array.of_list mine)
           ~next:(Array.of_list other)
+          ()
       )
     in
     let res = combine triples in
