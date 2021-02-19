@@ -2,7 +2,7 @@ open Core
 open Poly
 module P = Patience_diff_lib.Patience_diff.String
 module MB = Patience_diff_lib.Patience_diff.Matching_block
-module Interval = Core.Interval.Int
+module Interval = Interval_lib.Interval.Int
 
 let combine_triples (triples : MB.t list list) =
   let intervals =

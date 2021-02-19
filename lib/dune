@@ -1,2 +1,3 @@
-(library (name line_up_words_lib) (libraries core patience_diff pcre re2)
+(library (name line_up_words_lib)
+ (libraries core core.interval_lib patience_diff pcre re2)
  (preprocess (pps ppx_jane)))
