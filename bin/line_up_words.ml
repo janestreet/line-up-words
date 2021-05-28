@@ -10,4 +10,4 @@ let command =
   Command.basic_spec ~summary:"alignment for emacs's align-dwim" Command.Spec.empty run
 ;;
 
-let () = Exn.handle_uncaught ~exit:true (fun () -> Command.run command)
+let () = Exn.handle_uncaught ~exit:true (fun () -> Command_unix.run command)
