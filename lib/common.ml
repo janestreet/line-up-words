@@ -152,9 +152,8 @@ let line_up_words lines =
           let rec closing_line j =
             if j >= num_lines
             then None
-            else if
-              String.is_suffix lines.(j) ~suffix:"*)"
-              && line_is_comment (sub_line ~from:i ~to_:j)
+            else if String.is_suffix lines.(j) ~suffix:"*)"
+                 && line_is_comment (sub_line ~from:i ~to_:j)
             then Some j
             else closing_line (j + 1)
           in
