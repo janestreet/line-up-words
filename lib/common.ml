@@ -153,7 +153,7 @@ let line_up_words lines =
             if j >= num_lines
             then None
             else if String.is_suffix lines.(j) ~suffix:"*)"
-                 && line_is_comment (sub_line ~from:i ~to_:j)
+                    && line_is_comment (sub_line ~from:i ~to_:j)
             then Some j
             else closing_line (j + 1)
           in
@@ -226,8 +226,8 @@ let line_up_words lines =
           let sub_words = List.sub words ~pos:start ~len:(stop - start) in
           sub_words
           |> List.map ~f:(function
-            | "" -> " "
-            | x -> x)
+               | "" -> " "
+               | x -> x)
           |> String.concat ~sep:"")
       in
       let lengths = List.map strings ~f:String.length in
