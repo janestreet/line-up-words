@@ -1,3 +1,7 @@
-(executables (names line_up_words) (public_names line-up-words)
+(executables
+ (modes byte exe)
+ (names line_up_words)
+ (public_names line-up-words)
  (libraries core_unix.command_unix core line_up_words_lib)
- (preprocess (pps ppx_jane)))
+ (preprocess
+  (pps ppx_jane)))

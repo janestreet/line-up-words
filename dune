@@ -1,2 +1,4 @@
-(install (section share_root)
- (files (line-up-words.el as emacs/site-lisp/line-up-words.el)))
+(install
+ (section share_root)
+ (files
+  (line-up-words.el as emacs/site-lisp/line-up-words.el)))

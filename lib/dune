@@ -1,3 +1,5 @@
-(library (name line_up_words_lib)
+(library
+ (name line_up_words_lib)
  (libraries core core_unix.interval_lib patience_diff pcre re2)
- (preprocess (pps ppx_jane)))
+ (preprocess
+  (pps ppx_jane)))
