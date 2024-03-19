@@ -327,7 +327,8 @@ let%test_module _ =
       [%expect
         {|
         [ "analyze", analyze_command
-        ; "show",    show_command ] |}]
+        ; "show",    show_command ]
+        |}]
     ;;
 
     let%expect_test "strings get treated like symbols when binding to commas" =
@@ -346,7 +347,8 @@ let%test_module _ =
                f   b "c" "d"; |};
       [%expect {|
         f a b "c";
-        f   b "c" "d"; |}]
+        f   b "c" "d";
+        |}]
     ;;
   end)
 ;;
