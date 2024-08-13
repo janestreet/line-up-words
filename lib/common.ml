@@ -226,8 +226,8 @@ let line_up_words lines =
           let sub_words = List.sub words ~pos:start ~len:(stop - start) in
           sub_words
           |> List.map ~f:(function
-               | "" -> " "
-               | x -> x)
+            | "" -> " "
+            | x -> x)
           |> String.concat ~sep:"")
       in
       let lengths = List.map strings ~f:String.length in
@@ -322,7 +322,8 @@ let%test_module _ =
     let lines s = List.iter ~f:print_endline (line_up_words (String.split_lines s))
 
     let%expect_test "don't insert new space after strings before commas" =
-      lines {| [ "analyze", analyze_command
+      lines
+        {| [ "analyze", analyze_command
                ; "show",    show_command ] |};
       [%expect
         {|
@@ -343,9 +344,11 @@ let%test_module _ =
     ;;
 
     let%expect_test "don't insert new space after strings before semicolons" =
-      lines {| f a b "c";
+      lines
+        {| f a b "c";
                f   b "c" "d"; |};
-      [%expect {|
+      [%expect
+        {|
         f a b "c";
         f   b "c" "d";
         |}]
