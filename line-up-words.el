@@ -1,6 +1,6 @@
 ;;; line-up-words.el --- Align words in an intelligent way
 
-;; Copyright 2018 Jane Street Group, LLC <opensource@janestreet.com>
+;; Copyright 2018 Jane Street Group, LLC <opensource-contacts@janestreet.com>
 ;; URL: https://github.com/janestreet/line-up-words
 ;; Version: 1.0
 
