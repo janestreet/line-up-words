@@ -1,0 +1,5 @@
+(library
+ (name line_up_words_test)
+ (libraries core line_up_words)
+ (preprocess
+  (pps ppx_jane)))
