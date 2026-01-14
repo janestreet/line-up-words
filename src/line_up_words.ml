@@ -58,7 +58,7 @@ let split s =
         | Pcre.Delim s -> String.strip s
         | Pcre.Group _ -> assert false (* Irrelevant, since rex has no groups *)
         | Pcre.NoGroup -> assert false)
-      (* Ditto                               *)
+      (* Ditto *)
     in
     String.concat strings ~sep:"")
 ;;
@@ -92,13 +92,13 @@ let split_respecting_quotations s =
       match words with
       (* A string followed by space is a separate word. *)
       | "" :: _ | [] -> ("\"" ^ s ^ "\"") :: words
-      (* However, if a string is followed immediately by another word, not space, bind
-         it like [split] does any other word followed by a non-space delimiter. *)
+      (* However, if a string is followed immediately by another word, not space, bind it
+         like [split] does any other word followed by a non-space delimiter. *)
       | word :: words -> ("\"" ^ s ^ "\"" ^ word) :: words))
 ;;
 
 (* This function tries to determine if a line is a comment by replacing "(*" with ( and
-   "*)" with ) and seeing if it parses as a sexp.  To allow unbalanced parentheses within
+   "*)" with ) and seeing if it parses as a sexp. To allow unbalanced parentheses within
    comments, non-comment-opening parens are replaced with other characters. *)
 let line_is_comment =
   let open_comment_rex = Re2.create_exn "\\(\\*" in
@@ -134,10 +134,9 @@ let line_up_words lines =
     let sub_line ~from ~to_ =
       String.concat ~sep:"" (List.init (to_ - from + 1) ~f:(fun i -> lines.(i + from)))
     in
-    (* This loop attempts to find multi-line comments.  Given a line which looks like it
+    (* This loop attempts to find multi-line comments. Given a line which looks like it
        starts a comment, it looks forward to find a line which ends the comment, and if it
-       finds such a line, it marks all the lines between as comments in
-       [lines_to_ignore]*)
+       finds such a line, it marks all the lines between as comments in [lines_to_ignore] *)
     let lines_to_ignore = Array.create ~len:num_lines false in
     let rec loop i =
       if i < num_lines
