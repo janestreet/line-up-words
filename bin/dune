@@ -4,4 +4,4 @@
  (public_names line-up-words)
  (libraries core_unix.command_unix core line_up_words)
  (preprocess
-  (pps ppx_jane)))
+  (pps ppx_jane -compare-require-explicit-locality)))
